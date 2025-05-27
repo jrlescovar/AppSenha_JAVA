@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.jrlescovar.appsenha.LoginController"
+            style="-fx-background-color: #1e1e1e; -fx-border-color: #220832; -fx-border-width: 3;"
+            prefWidth="900" prefHeight="500">
+
+    <!-- TOPO -->
+    <top>
+        <Label text="BEM VINDO AO GERENCIADOR DE SENHAS CRIPTOGRAFADOS"
+               style="-fx-text-fill: #3a66ff; -fx-font-size: 22px; -fx-font-weight: bold;-fx-padding: 5 0 0 0;"
+               BorderPane.alignment="CENTER"
+               maxWidth="Infinity"
+               alignment="CENTER"/>
+    </top>
+
+    <!-- CENTRO -->
+    <center>
+        <VBox alignment="CENTER" spacing="20">
+            <Button text="ENTRAR"
+                    fx:id="btnEntrar"
+                    style="-fx-background-color: #fff56c; -fx-font-size: 22px; -fx-text-fill: black; -fx-font-weight: bold; -fx-background-radius: 30;"
+                    prefWidth="180" prefHeight="50"/>
+
+            <Button text="CRIAR USUÁRIO"
+                    fx:id="btnCriarUsuario"
+                    style="-fx-background-color: #42c8ff; -fx-font-size: 19px; -fx-text-fill: black; -fx-font-weight: bold; -fx-background-radius: 30;"
+                    prefWidth="180" prefHeight="50"/>
+        </VBox>
+    </center>
+
+    <!-- RODAPÉ -->
+    <bottom>
+        <Label text="DESENVOLVIDO POR : JrLESCOVAR"
+               style="-fx-text-fill: white; -fx-font-size: 15px; -fx-font-weight: bold; -fx-padding: 0 20 10 0;"
+               BorderPane.alignment="BOTTOM_RIGHT"/>
+
+    </bottom>
+</BorderPane>

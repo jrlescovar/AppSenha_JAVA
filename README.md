@@ -17,5 +17,5 @@ O diferencial deste app é permitir que o usuário **configure a aparência e o 
 - Ideal para quem quer guardar senhas de forma **discreta e segura**
 
 ### 🚧 Status:
-> Em desenvolvimento — novas funcionalidades serão adicionadas, como edição de senhas, categorias, exportação de dados, aparência camuflada, etc.
+> Em desenvolvimento — novas funcionalidades serão adicionadas, como edição de senhas, categorias, aparência camuflada, etc.
 

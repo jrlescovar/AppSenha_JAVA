@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.jrlescovar.appsenha.NovaSenhaController"
+            prefWidth="900" prefHeight="500"
+            style="-fx-background-color: #1e1e1e; -fx-border-color: #220832; -fx-border-width: 3;">
+
+    <!-- TOPO -->
+    <top>
+        <Label text="ADICIONAR NOVA SENHA"
+               style="-fx-text-fill: #3a66ff; -fx-font-size: 20px; -fx-font-weight: bold; -fx-padding: 20;"
+               BorderPane.alignment="CENTER"/>
+    </top>
+
+    <!-- CENTRO -->
+    <center>
+        <StackPane alignment="CENTER">
+            <VBox spacing="12" alignment="CENTER" maxWidth="400">
+                <Label text="Serviço:"
+                       style="-fx-text-fill: white; -fx-font-size: 15px; -fx-font-weight: bold;" />
+
+                <TextField fx:id="campoServico"
+                           promptText="Digite o nome do serviço"
+                           style="-fx-background-radius: 30; -fx-background-color: grey; -fx-text-fill: white;"
+                           prefHeight="40" maxWidth="400"/>
+
+                <Label text="Usuário:"
+                       style="-fx-text-fill: white; -fx-font-size: 15px; -fx-font-weight: bold;" />
+
+                <TextField fx:id="campoUsuario"
+                           promptText="Seu nome de usuário"
+                           style="-fx-background-radius: 30; -fx-background-color: grey; -fx-text-fill: white;"
+                           prefHeight="40" maxWidth="400"/>
+
+                <Label text="Senha:"
+                       style="-fx-text-fill: white; -fx-font-size: 15px; -fx-font-weight: bold;" />
+
+                <PasswordField fx:id="campoSenha"
+                               promptText="Digite sua senha"
+                               style="-fx-background-radius: 30; -fx-background-color: grey; -fx-text-fill: white;"
+                               prefHeight="40" maxWidth="400"/>
+
+                <HBox spacing="20" alignment="CENTER" style="-fx-padding: 20 0 0 0;">
+                    <Button fx:id="btnSalvar" text="SALVAR"
+                            style="-fx-background-color: #3a66ff; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 30;"
+                            prefWidth="140" prefHeight="40"/>
+                    <Button fx:id="btnCancelar" text="CANCELAR"
+                            style="-fx-background-color: red; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 30;"
+                            prefWidth="140" prefHeight="40"/>
+                </HBox>
+            </VBox>
+        </StackPane>
+    </center>
+
+    <!-- RODAPÉ -->
+    <bottom>
+        <Label text="DESENVOLVIDO POR : JrLESCOVAR"
+               style="-fx-text-fill: white; -fx-font-size: 13px; -fx-font-weight: bold; -fx-padding: 0 15 10 0;"
+               BorderPane.alignment="BOTTOM_RIGHT"/>
+    </bottom>
+</BorderPane>

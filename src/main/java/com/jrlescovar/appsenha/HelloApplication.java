@@ -9,7 +9,7 @@ import javafx.stage.Window;
 import java.io.IOException;
 
 public class HelloApplication extends Application {
-
+    public static String usuarioLogado;
     private static Stage primaryStage;
 
     @Override

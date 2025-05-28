@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.jrlescovar.appsenha.PrincipalController"
+            prefWidth="900" prefHeight="500"
+            style="-fx-background-color: #1e1e1e; -fx-border-color: #220832; -fx-border-width: 3;">
+
+    <!-- TOPO -->
+    <top>
+        <StackPane alignment="CENTER">
+            <VBox alignment="TOP_LEFT" style="-fx-padding: 10 0 0 10;" StackPane.alignment="TOP_LEFT">
+                <Button fx:id="btnVoltar"
+                        text="VOLTAR"
+                        style="-fx-background-color: red; -fx-text-fill: white; -fx-font-weight: bold; -fx-font-size: 14px; -fx-background-radius: 20;"
+                        prefWidth="100" prefHeight="40"/>
+            </VBox>
+            <Label text="MINHAS SENHAS"
+                   style="-fx-text-fill: #3a66ff; -fx-font-size: 24px; -fx-font-weight: bold;"
+                   StackPane.alignment="CENTER"/>
+        </StackPane>
+    </top>
+
+    <!-- CENTRO -->
+    <center>
+        <VBox spacing="10" alignment="CENTER" style="-fx-padding: 0 50 0 50;">
+            <TableView fx:id="tabelaSenhas" prefHeight="350" prefWidth="800">
+                <columns>
+                    <TableColumn fx:id="colunaServico" text="Serviço" prefWidth="266"/>
+                    <TableColumn fx:id="colunaUsuario" text="Usuário" prefWidth="266"/>
+                    <TableColumn fx:id="colunaSenha" text="Senha" prefWidth="266"/>
+                </columns>
+            </TableView>
+
+            <HBox spacing="15" alignment="CENTER">
+                <Button text="➕ Nova Senha" fx:id="btnNovaSenha"
+                        style="-fx-background-color: #42c8ff; -fx-text-fill: black; -fx-font-weight: bold; -fx-background-radius: 20;"/>
+            </HBox>
+        </VBox>
+    </center>
+
+    <!-- RODAPÉ -->
+    <bottom>
+        <Label text="DESENVOLVIDO POR : JrLESCOVAR"
+               style="-fx-text-fill: white; -fx-font-size: 13px; -fx-font-weight: bold; -fx-padding: 0 15 10 0;"
+               BorderPane.alignment="BOTTOM_RIGHT"/>
+    </bottom>
+
+</BorderPane>

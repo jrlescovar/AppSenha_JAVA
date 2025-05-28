@@ -42,12 +42,16 @@ public class UsuarioRepository {
     }
 
     public static Usuario buscarUsuarioPorNome(String nome) {
-        List<Usuario> usuarios = carregarUsuarios(); // Método que lê o JSON !!!!!!!!!!!!!!!!!!!11
+        List<Usuario> usuarios = carregarUsuarios(); // Lê os usuários do JSON
+
+        String nomeProcurado = nome.trim(); // Remove espaços antes/depois
+
         for (Usuario u : usuarios) {
-            if (u.getNome().equalsIgnoreCase(nome)) {
+            System.out.println("Comparando: '" + u.getNome() + "' com '" + nomeProcurado + "'");
+            if (u.getNome().equalsIgnoreCase(nomeProcurado)) {
                 return u;
             }
         }
-        return null;
+        return null; // Se não encontrou
     }
 }

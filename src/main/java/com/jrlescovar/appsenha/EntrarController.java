@@ -60,13 +60,26 @@ public class EntrarController {
         System.out.println("Usuário digitado: " + usuario);
         System.out.println("Senha digitada: " + senha);
 
-        // Validação fake só para ver funcionando
-        if (usuario.equals("teste") && senha.equals("1234")) {
-            System.out.println("Login OK!");
-        } else {
-            System.out.println("Login falhou!");
+        Usuario u = UsuarioRepository.buscarUsuarioPorNome(usuario);
+
+        if (u == null) {
             erroUsuario.setVisible(true);
+            erroSenha.setVisible(false);
+            System.out.println("Usuário não encontrado!");
+        } else if (!CriptografiaUtil.hashSHA256(senha).equals(u.getSenhaCriptografada())) {
+            erroUsuario.setVisible(false);
             erroSenha.setVisible(true);
+            System.out.println("Senha incorreta!");
+        } else {
+            System.out.println("Login OK!");
+            try {
+                HelloApplication.usuarioLogado = usuario;
+                HelloApplication.mudarCena("principal.fxml");
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
         }
     }
+
+
 }
